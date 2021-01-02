@@ -1,15 +1,38 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
+
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  let header
-
+  let header;
+  const data = useStaticQuery(
+    graphql`
+        {
+        twitter: file(relativePath: { eq: "twitter.png" }) {
+            childImageSharp {
+            fixed(width: 50) {
+                ...GatsbyImageSharpFixed
+            }
+            }
+        },
+        github: file(relativePath: { eq: "github.png" }) {
+          childImageSharp {
+          fixed(width: 50) {
+              ...GatsbyImageSharpFixed
+          }
+          }
+      }
+        }
+    `
+    );
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
         <Link to="/">{title}</Link>
+        <Img className="twitter" fixed={data.twitter.childImageSharp.fixed} alt="test fixed" />
+        <Img className="twitter" fixed={data.github.childImageSharp.fixed} alt="test fixed" />
       </h1>
     )
   } else {

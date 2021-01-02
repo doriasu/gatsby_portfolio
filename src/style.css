@@ -255,8 +255,13 @@ a:focus {
 }
 
 .main-heading {
+  display: inline-block;
   font-size: var(--fontSize-7);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
+}
+.main-heading > .twitter{
+  margin:-5px 10px;
 }
 
 .post-list-item {
