@@ -41,7 +41,7 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      <p>くだらないことを書いていくブログです</p>
+      <p>なんでもないことを書いていくブログです</p>
     </div>
   )
 }

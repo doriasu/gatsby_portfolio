@@ -30,7 +30,7 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
+          console.log(post.frontmatter.tags)
           return (
             <li key={post.fields.slug}>
               <article
@@ -44,7 +44,7 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <small>{post.frontmatter.date}</small><br/>
                 </header>
                 <section>
                   <p
@@ -54,6 +54,9 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
+                {post.frontmatter.tags!=null&&post.frontmatter.tags.map((item) => (
+                    <small className="article_tag">{item}</small>
+                  ))}
               </article>
             </li>
           )
@@ -82,6 +85,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tags
         }
       }
     }

@@ -31,8 +31,8 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1 className="main-heading">
         <Link to="/">{title}</Link>
-        <Img className="twitter" fixed={data.twitter.childImageSharp.fixed} alt="test fixed" />
-        <Img className="twitter" fixed={data.github.childImageSharp.fixed} alt="test fixed" />
+        <a className="img" href = "https://twitter.com/u_yeiyei"><Img fixed={data.twitter.childImageSharp.fixed} alt="test fixed" /></a>
+        <a className="img" href = "https://github.com/doriasu"><Img fixed={data.github.childImageSharp.fixed} alt="test fixed" /></a>
       </h1>
     )
   } else {
