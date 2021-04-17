@@ -23,7 +23,8 @@ const Skill: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">C/C++</div>
           <div>
-            実際に使ったのは2年ほどで競技プログラミング(AtcoderID:doradorasuki)やインターンでのQNX向けドライバ制作体験、OS自作本やCコンパイラ開発(途中)などに取り組みました。
+                      実際に使ったのは2年ほどで競技プログラミング(AtcoderID:doradorasuki)やインターンでのQNX向けドライバ制作体験、OS自作本やCコンパイラ開発(途中)などに取り組みました。
+                      今年からHPC系の研究室所属のためc++を用いた研究を行います。
           </div>
         </div>
         <div>
