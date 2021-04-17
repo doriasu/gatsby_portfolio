@@ -1,4 +1,3 @@
-import "./src/__generated__/gatsby-types"
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Blog`,
