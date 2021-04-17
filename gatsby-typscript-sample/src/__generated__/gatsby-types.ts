@@ -3160,11 +3160,6 @@ type BlogIndexQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick
       & { readonly fields: Maybe<Pick<Fields, 'slug'>>, readonly frontmatter: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description'>> }
     )> } };
 
-type hometakuroDocumentsprogrammingtypescriptgatsbyBloggatsbyTypscriptSamplesrcpages404Js3159585216QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type hometakuroDocumentsprogrammingtypescriptgatsbyBloggatsbyTypscriptSamplesrcpages404Js3159585216Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
 type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3172,6 +3167,16 @@ type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
       Pick<SiteSiteMetadata, 'title' | 'description'>
       & { readonly social: Maybe<Pick<Social, 'twitter'>> }
     )> }> };
+
+type hometakuroDocumentsprogrammingtypescriptgatsbyBloggatsbyTypscriptSamplesrcpages404Js3159585216QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type hometakuroDocumentsprogrammingtypescriptgatsbyBloggatsbyTypscriptSamplesrcpages404Js3159585216Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
+type hometakuroDocumentsprogrammingtypescriptgatsbyBloggatsbyTypscriptSamplesrcpagesusingTypescriptTsx2907560070QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type hometakuroDocumentsprogrammingtypescriptgatsbyBloggatsbyTypscriptSamplesrcpagesusingTypescriptTsx2907560070Query = { readonly site: Maybe<Pick<Site, 'buildTime'>> };
 
 type BlogPostBySlugQueryVariables = Exact<{
   id: Scalars['String'];
@@ -3210,11 +3215,6 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type hometakuroDocumentsprogrammingtypescriptgatsbyBloggatsbyTypscriptSamplesrcpagesusingTypescriptTsx2907560070QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type hometakuroDocumentsprogrammingtypescriptgatsbyBloggatsbyTypscriptSamplesrcpagesusingTypescriptTsx2907560070Query = { readonly site: Maybe<Pick<Site, 'buildTime'>> };
 
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 

@@ -3,7 +3,7 @@ import React from "react"
 const Skill: React.FC = () => {
   return (
     <div className="pb-8">
-      <div className="text-4xl">Skill</div>
+      <div className="text-4xl border-b-2 border-black inline-block">Skill</div>
       <div className="text-center pb-4">現在ホットな順に書いていきます</div>
       <div className="grid grid-cols-2 gap-4 pb-4">
         <div>
