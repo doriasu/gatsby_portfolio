@@ -2,7 +2,7 @@ import React from "react"
 
 const Profile: React.FC = () => {
   return (
-    <div>
+    <div className="pb-8">
       <div className="text-4xl">Profile</div>
       <div className="grid grid-flow-col grid-cols-2 grid-rows-1 gap-4">
         <div>ここに画像が入る</div>

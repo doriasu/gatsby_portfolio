@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from '../components/header'
 import Profile from '../components/profile'
+import Skill from '../components/skill'
 const BlogIndex: React.FC = () => {
 
   return (
@@ -14,6 +15,7 @@ const BlogIndex: React.FC = () => {
       <SEO title="All posts" />
       <Header />
       <Profile />
+      <Skill />
     </div>
   )
 }
