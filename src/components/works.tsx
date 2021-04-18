@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Img from 'gatsby-image'
 import Github from '../atoms/github'
+import Hatena from '../atoms/hatena'
 
 const Works: React.FC = () => {
   const data = useStaticQuery<GatsbyTypes.WorkimgQuery>(query)
@@ -35,11 +36,11 @@ const Works: React.FC = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="flex">
           <Github url="https://github.com/doriasu/gatsby_portfolio" />
         </div>
-        <div>
-          <Github url="sasa" />
+        <div className="flex">
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/13/005239" />
         </div>
         <div>
           <div className="text-3xl pb-2">Cookpad Spring Intern</div>
@@ -69,11 +70,13 @@ const Works: React.FC = () => {
             </div>
           </div>
         </div>
-        <div>
-          <Github url="https://github.com/doriasu/ca-tech-challenge-web-202103" />
+        <div className="flex">
+          <Github url="https://github.com/doriasu/spring-internship-2021-recipe-site" />
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/12/231042" />
         </div>
-        <div>
+        <div className="flex">
           <Github url="https://github.com/monptt/speechmanager" />
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/03/31/001350" />
         </div>
         <div>
           <div className="text-3xl pb-2">JointSound</div>
@@ -103,11 +106,12 @@ const Works: React.FC = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="flex">
           <Github url="https://github.com/jphacks/B_2021" />
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2020/11/08/000502" />
         </div>
         <div>
-          <Github url="sasa" />
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/12/16/000132" />
         </div>
         <div>
           <div className="text-3xl pb-2">QNX向けカメラドライバ</div>
@@ -123,8 +127,9 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div></div>
-        <div>
+        <div className="flex">
           <Github url="https://github.com/doriasu/FixstarsInternship" />
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/09/11/210642" />
         </div>
       </div>
     </div>
