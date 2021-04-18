@@ -9,7 +9,7 @@ const Header: React.FC = ()=> {
             dora's portfolio
           </div>
           <li>
-            <Link to="/">top</Link>
+            {/* <Link to="/">top</Link> */}
           </li>
         </ul>
       </header>

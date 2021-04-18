@@ -2,6 +2,8 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Img from 'gatsby-image'
+import Github from "../atoms/github"
+import Hatena from "../atoms/hatena"
 
 const Profile: React.FC = () => {
   const data = useStaticQuery<GatsbyTypes.ProfileimgQuery>(query)
@@ -11,7 +13,7 @@ const Profile: React.FC = () => {
         Profile
       </div>
       <div className="grid grid-flow-col grid-cols-2 grid-rows-1 gap-4">
-        <div>
+        <div className="grid place-items-center">
           <Img fixed={data.icon.childImageSharp.fixed} />
         </div>
         <div>
@@ -30,6 +32,10 @@ const Profile: React.FC = () => {
           <div className="grid grid-flow-col grid-cols-2 grid-rows-1 gap-4 pb-4">
             <div className="grid items-center">email</div>
             <div>takuandtetsu[at]live.jp</div>
+          </div>
+          <div className="flex">
+            <Github url="https://github.com/doriasu" />
+            <Hatena url="https://doradorasuki.hatenablog.com/" />
           </div>
         </div>
       </div>

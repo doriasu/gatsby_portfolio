@@ -15,11 +15,11 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">このサイト</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div className="grid place-items-center">pic</div>
+            <div className="grid place-items-center">This Page</div>
             <div className="col-span-2">
               2021/4/17
               <br />
-              ポートフォリオが昔作ったまま放置していたのでシンプルなものに作り直しました。せっかくなのではじめてGatsby.jsを用いて制作しています。
+              ポートフォリオが昔作ったまま放置していたのでシンプルなものに作り直しました。せっかくなのではじめてGatsby.jsを用いて制作しています。graphqlの型定義を自動生成してくれるの気持ちいいですね。
             </div>
           </div>
         </div>
@@ -97,7 +97,9 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">MIKUAR</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div className="grid place-items-center">pic</div>
+            <div className="grid place-items-center">
+              <Img fixed={data.miku.childImageSharp.fixed} />
+            </div>
             <div className="col-span-2">
               2019年秋4ヶ月ほど
               <br />
@@ -117,7 +119,8 @@ const Works: React.FC = () => {
           <div className="text-3xl pb-2">QNX向けカメラドライバ</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid place-items-center">
-              <Img fixed={data.noimage.childImageSharp.fixed} />
+              {/* <Img fixed={data.noimage.childImageSharp.fixed} /> */}
+              No Image
             </div>
             <div className="col-span-2">
               2019年夏
@@ -168,6 +171,13 @@ export const query = graphql`
       }
     }
     noimage: file(relativePath: { eq: "noimage.png" }) {
+      childImageSharp {
+        fixed(width: 150, height: 140) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    miku: file(relativePath: { eq: "miku.png" }) {
       childImageSharp {
         fixed(width: 150, height: 140) {
           ...GatsbyImageSharpFixed
