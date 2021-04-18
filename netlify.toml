@@ -1,2 +1,2 @@
 [build]
-command  = "yarn css_build&&yarn build"
+command  = "yarn build&&yarn css_build"
