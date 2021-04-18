@@ -61,6 +61,6 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "typecheck": "tsc",
-    "css_build":"tailwindcss build -o tailwind.css"
+    "css_build":"tailwindcss build -o public/tailwind.css"
   }
 }
