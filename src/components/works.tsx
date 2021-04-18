@@ -1,6 +1,10 @@
+/// <reference path="../__generated__/gatsby-types.ts" />
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import Img from 'gatsby-image'
 
 const Works: React.FC = () => {
+  const data = useStaticQuery<GatsbyTypes.WorkimgQuery>(query)
   return (
     <div className="pb-8">
       <div className="text-4xl border-b-2 border-black inline-block">Works</div>
@@ -20,7 +24,9 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">CA TECH CHALLENGE</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div>pic</div>
+            <div>
+              <Img fixed={data.catech.childImageSharp.fixed} />
+            </div>
             <div className="col-span-2">
               2021/3/27~2021/3/28
               <br />
@@ -31,7 +37,7 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">Cookpad Spring Intern</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div>pic</div>
+            <div><Img fixed={data.cookpad.childImageSharp.fixed} /></div>
             <div className="col-span-2">
               2021/3/22~2021/3/26
               <br />
@@ -42,7 +48,7 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">SpeechManager</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div>pic</div>
+            <div><Img fixed={data.speech.childImageSharp.fixed} /></div>
             <div className="col-span-2">
               2021/3/1~2021/3/12
               <br />
@@ -55,7 +61,7 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">JointSound</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div>pic</div>
+            <div><Img fixed={data.jointsound.childImageSharp.fixed} /></div>
             <div className="col-span-2">
               2020/10/31~2020/11/7
               <br />
@@ -81,7 +87,7 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">QNX向けカメラドライバ</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div>pic</div>
+            <div><Img fixed={data.noimage.childImageSharp.fixed} /></div>
             <div className="col-span-2">
               2019年夏
               <br />
@@ -94,3 +100,43 @@ const Works: React.FC = () => {
   )
 }
 export default Works
+
+export const query = graphql`
+  query Workimg {
+    catech: file(relativePath: { eq: "catech.png" }) {
+      childImageSharp {
+        fixed(width: 150, height: 140) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    cookpad: file(relativePath: { eq: "cookpad.png" }) {
+      childImageSharp {
+        fixed(width: 150, height: 140) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    jointsound: file(relativePath: { eq: "jointsound.png" }) {
+      childImageSharp {
+        fixed(width: 150, height: 140) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    speech: file(relativePath: { eq: "speechmanager.png" }) {
+      childImageSharp {
+        fixed(width: 150, height: 140) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    noimage: file(relativePath: { eq: "noimage.png" }) {
+      childImageSharp {
+        fixed(width: 150, height: 140) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`

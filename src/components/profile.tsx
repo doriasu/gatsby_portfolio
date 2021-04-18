@@ -35,7 +35,7 @@ const Profile: React.FC = () => {
       </div>
     </div>
   )
-}
+}/// <reference path="../__generated__/gatsby-types.ts" />
 export const query = graphql`
   query Profileimg {
     icon: file(relativePath: { eq: "syakura.jpg" }) {
