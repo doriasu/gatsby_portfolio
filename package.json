@@ -60,6 +60,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "css_build":"tailwindcss build -o tailwind.css"
   }
 }
