@@ -19,6 +19,12 @@ const Profile: React.FC = () => {
         <div>
           Web Engineer
           <div className="grid grid-flow-col grid-cols-2 grid-rows-1 gap-4 pb-4">
+            <div className="grid items-center">名前</div>
+            <div>
+              Takuro Omori
+            </div>
+          </div>
+          <div className="grid grid-flow-col grid-cols-2 grid-rows-1 gap-4 pb-4">
             <div className="grid items-center">所属</div>
             <div>
               EEIS, Graduate School of Engineering, The University of Tokyo

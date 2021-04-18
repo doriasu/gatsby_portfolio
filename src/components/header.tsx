@@ -6,7 +6,7 @@ const Header: React.FC = ()=> {
       <header>
         <ul>
           <div className="container mx-auto h-16 text-center text-3xl text-san mt-8 ">
-            dora's portfolio
+            Takuro's portfolio
           </div>
           <li>
             {/* <Link to="/">top</Link> */}
