@@ -2,6 +2,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Img from 'gatsby-image'
+import Github from '../atoms/github'
 
 const Works: React.FC = () => {
   const data = useStaticQuery<GatsbyTypes.WorkimgQuery>(query)
@@ -13,7 +14,7 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">このサイト</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div>pic</div>
+            <div className="grid place-items-center">pic</div>
             <div className="col-span-2">
               2021/4/17
               <br />
@@ -24,7 +25,7 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">CA TECH CHALLENGE</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div>
+            <div className="grid place-items-center">
               <Img fixed={data.catech.childImageSharp.fixed} />
             </div>
             <div className="col-span-2">
@@ -35,9 +36,17 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
+          <Github url="https://github.com/doriasu/gatsby_portfolio" />
+        </div>
+        <div>
+          <Github url="sasa" />
+        </div>
+        <div>
           <div className="text-3xl pb-2">Cookpad Spring Intern</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div><Img fixed={data.cookpad.childImageSharp.fixed} /></div>
+            <div className="grid place-items-center">
+              <Img fixed={data.cookpad.childImageSharp.fixed} />
+            </div>
             <div className="col-span-2">
               2021/3/22~2021/3/26
               <br />
@@ -48,7 +57,9 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">SpeechManager</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div><Img fixed={data.speech.childImageSharp.fixed} /></div>
+            <div className="grid place-items-center">
+              <Img fixed={data.speech.childImageSharp.fixed} />
+            </div>
             <div className="col-span-2">
               2021/3/1~2021/3/12
               <br />
@@ -59,9 +70,17 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
+          <Github url="https://github.com/doriasu/ca-tech-challenge-web-202103" />
+        </div>
+        <div>
+          <Github url="https://github.com/monptt/speechmanager" />
+        </div>
+        <div>
           <div className="text-3xl pb-2">JointSound</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div><Img fixed={data.jointsound.childImageSharp.fixed} /></div>
+            <div className="grid place-items-center">
+              <Img fixed={data.jointsound.childImageSharp.fixed} />
+            </div>
             <div className="col-span-2">
               2020/10/31~2020/11/7
               <br />
@@ -75,7 +94,7 @@ const Works: React.FC = () => {
         <div>
           <div className="text-3xl pb-2">MIKUAR</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div>pic</div>
+            <div className="grid place-items-center">pic</div>
             <div className="col-span-2">
               2019年秋4ヶ月ほど
               <br />
@@ -85,15 +104,27 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
+          <Github url="https://github.com/jphacks/B_2021" />
+        </div>
+        <div>
+          <Github url="sasa" />
+        </div>
+        <div>
           <div className="text-3xl pb-2">QNX向けカメラドライバ</div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div><Img fixed={data.noimage.childImageSharp.fixed} /></div>
+            <div className="grid place-items-center">
+              <Img fixed={data.noimage.childImageSharp.fixed} />
+            </div>
             <div className="col-span-2">
               2019年夏
               <br />
               FixstarsSummerInternShipにて制作しました。QNXと呼ばれる組み込みOS向けのカメラドライバです。beagleboneにて動作します。C言語を用いて制作しました。
             </div>
           </div>
+        </div>
+        <div></div>
+        <div>
+          <Github url="https://github.com/doriasu/FixstarsInternship" />
         </div>
       </div>
     </div>
