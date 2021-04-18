@@ -3144,6 +3144,11 @@ type SitePluginSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
+type HatenaimgQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type HatenaimgQuery = { readonly icon: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
+
 type GithubimgQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3157,6 +3162,11 @@ type BlogIndexQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick
       & { readonly fields: Maybe<Pick<Fields, 'slug'>>, readonly frontmatter: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description'>> }
     )> } };
 
+type ProfileimgQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type ProfileimgQuery = { readonly icon: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
+
 type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3169,16 +3179,6 @@ type WorkimgQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type WorkimgQuery = { readonly catech: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly cookpad: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly jointsound: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly speech: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly noimage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly miku: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
-
-type HatenaimgQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type HatenaimgQuery = { readonly icon: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
-
-type ProfileimgQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type ProfileimgQuery = { readonly icon: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
 
 type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
 
