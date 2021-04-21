@@ -13,7 +13,7 @@ const Works: React.FC = () => {
       <div className="text-center pb-4">時系列順に書いていきます</div>
       <div className="grid grid-cols-2 gap-4 pb-4">
         <div>
-          <div className="text-3xl pb-2">このサイト</div>
+          <div className="flex text-3xl pb-2">このサイト<Github url="https://github.com/doriasu/gatsby_portfolio" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid place-items-center">This Page</div>
             <div className="col-span-2">
@@ -24,9 +24,9 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="text-3xl pb-2">CA TECH CHALLENGE</div>
+          <div className="flex text-3xl pb-2">CA TECH CHALLENGE<Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/13/005239" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div className="grid place-items-center">
+            <div className="grid justify-center">
               <Img fixed={data.catech.childImageSharp.fixed} />
             </div>
             <div className="col-span-2">
@@ -36,16 +36,11 @@ const Works: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex">
-          <Github url="https://github.com/doriasu/gatsby_portfolio" />
-        </div>
-        <div className="flex">
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/13/005239" />
-        </div>
         <div>
-          <div className="text-3xl pb-2">Cookpad Spring Intern</div>
+          <div className="flex text-3xl pb-2">Cookpad Spring Intern<Github url="https://github.com/doriasu/spring-internship-2021-recipe-site" />
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/12/231042" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div className="grid place-items-center">
+            <div className="grid justify-center">
               <Img fixed={data.cookpad.childImageSharp.fixed} />
             </div>
             <div className="col-span-2">
@@ -56,9 +51,10 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="text-3xl pb-2">SpeechManager</div>
+          <div className="flex text-3xl pb-2">SpeechManager<Github url="https://github.com/monptt/speechmanager" />
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/03/31/001350" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div className="grid place-items-center">
+            <div className="grid justify-center">
               <Img fixed={data.speech.childImageSharp.fixed} />
             </div>
             <div className="col-span-2">
@@ -70,18 +66,11 @@ const Works: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex">
-          <Github url="https://github.com/doriasu/spring-internship-2021-recipe-site" />
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/12/231042" />
-        </div>
-        <div className="flex">
-          <Github url="https://github.com/monptt/speechmanager" />
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/03/31/001350" />
-        </div>
         <div>
-          <div className="text-3xl pb-2">JointSound</div>
+          <div className="flex text-3xl pb-2">JointSound<Github url="https://github.com/jphacks/B_2021" />
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2020/11/08/000502" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div className="grid place-items-center">
+            <div className="grid justify-center">
               <Img fixed={data.jointsound.childImageSharp.fixed} />
             </div>
             <div className="col-span-2">
@@ -95,9 +84,9 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="text-3xl pb-2">MIKUAR</div>
+          <div className="flex text-3xl pb-2">MIKUAR<Hatena url="https://doradorasuki.hatenablog.com/entry/2019/12/16/000132" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div className="grid place-items-center">
+            <div className="grid justify-center">
               <Img fixed={data.miku.childImageSharp.fixed} />
             </div>
             <div className="col-span-2">
@@ -108,15 +97,9 @@ const Works: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex">
-          <Github url="https://github.com/jphacks/B_2021" />
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2020/11/08/000502" />
-        </div>
         <div>
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/12/16/000132" />
-        </div>
-        <div>
-          <div className="text-3xl pb-2">QNX向けカメラドライバ</div>
+          <div className="flex text-3xl pb-2">QNX向けカメラドライバ<Github url="https://github.com/doriasu/FixstarsInternship" />
+          <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/09/11/210642" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid place-items-center">
               {/* <Img fixed={data.noimage.childImageSharp.fixed} /> */}
@@ -130,10 +113,6 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div></div>
-        <div className="flex">
-          <Github url="https://github.com/doriasu/FixstarsInternship" />
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/09/11/210642" />
-        </div>
       </div>
     </div>
   )
@@ -144,42 +123,42 @@ export const query = graphql`
   query Workimg {
     catech: file(relativePath: { eq: "catech.png" }) {
       childImageSharp {
-        fixed(width: 150, height: 140) {
+        fixed(width: 140, height: 140) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     cookpad: file(relativePath: { eq: "cookpad.png" }) {
       childImageSharp {
-        fixed(width: 150, height: 140) {
+        fixed(width: 140, height: 140) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     jointsound: file(relativePath: { eq: "jointsound.png" }) {
       childImageSharp {
-        fixed(width: 150, height: 140) {
+        fixed(width: 140, height: 140) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     speech: file(relativePath: { eq: "speechmanager.png" }) {
       childImageSharp {
-        fixed(width: 150, height: 140) {
+        fixed(width: 140, height: 140) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     noimage: file(relativePath: { eq: "noimage.png" }) {
       childImageSharp {
-        fixed(width: 150, height: 140) {
+        fixed(width: 140, height: 140) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     miku: file(relativePath: { eq: "miku.png" }) {
       childImageSharp {
-        fixed(width: 150, height: 140) {
+        fixed(width: 140, height: 140) {
           ...GatsbyImageSharpFixed
         }
       }
