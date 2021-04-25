@@ -12,7 +12,7 @@ const Works: React.FC = () => {
       <div className="text-center pb-4">時系列順に書いていきます</div>
       <div className="grid grid-cols-2 gap-4 pb-4">
         <div>
-          <div className="flex text-3xl pb-2">このサイト<Github url="https://github.com/doriasu/gatsby_portfolio" /></div>
+          <div className="flex text-3xl pb-2">このサイト<Github url="https://github.com/doriasu/gatsby_portfolio" /><Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/25/220728" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid place-items-center">This Page</div>
             <div className="col-span-2">
