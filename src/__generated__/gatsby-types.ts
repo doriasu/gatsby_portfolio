@@ -3152,7 +3152,43 @@ type SitePluginSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
+type BlogIndexQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type BlogIndexQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, readonly allMarkdownRemark: { readonly nodes: ReadonlyArray<(
+      Pick<MarkdownRemark, 'excerpt'>
+      & { readonly fields: Maybe<Pick<Fields, 'slug'>>, readonly frontmatter: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description'>> }
+    )> } };
+
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
+
+type ProfileimgQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type ProfileimgQuery = { readonly icon: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
+
+type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrcpages404Js3159585216QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrcpages404Js3159585216Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
+type WorkimgQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type WorkimgQuery = { readonly catech: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly cookpad: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly jointsound: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly speech: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly noimage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly miku: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
+
+type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrcpagesusingTypescriptTsx2907560070QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrcpagesusingTypescriptTsx2907560070Query = { readonly site: Maybe<Pick<Site, 'buildTime'>> };
+
+type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrccomponentsseoJs2841359383QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrccomponentsseoJs2841359383Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
+      Pick<SiteSiteMetadata, 'title' | 'description'>
+      & { readonly social: Maybe<Pick<Social, 'twitter'>> }
+    )> }> };
 
 type GithubimgQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -3163,42 +3199,6 @@ type HatenaimgQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type HatenaimgQuery = { readonly icon: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
-
-type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrccomponentsseoJs2841359383QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrccomponentsseoJs2841359383Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
-      Pick<SiteSiteMetadata, 'title' | 'description'>
-      & { readonly social: Maybe<Pick<Social, 'twitter'>> }
-    )> }> };
-
-type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrcpagesusingTypescriptTsx2907560070QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrcpagesusingTypescriptTsx2907560070Query = { readonly site: Maybe<Pick<Site, 'buildTime'>> };
-
-type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrcpages404Js3159585216QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type userstakuroDocumentssyumiProgrammingtypescriptgatsbyPortfoliosrcpages404Js3159585216Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
-type BlogIndexQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type BlogIndexQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, readonly allMarkdownRemark: { readonly nodes: ReadonlyArray<(
-      Pick<MarkdownRemark, 'excerpt'>
-      & { readonly fields: Maybe<Pick<Fields, 'slug'>>, readonly frontmatter: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description'>> }
-    )> } };
-
-type WorkimgQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type WorkimgQuery = { readonly catech: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly cookpad: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly jointsound: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly speech: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly noimage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, readonly miku: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
-
-type ProfileimgQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type ProfileimgQuery = { readonly icon: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
 

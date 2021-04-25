@@ -1,4 +1,3 @@
-/// <reference path="../__generated__/gatsby-types.ts" />
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Img from 'gatsby-image'
@@ -14,7 +13,8 @@ const Profile: React.FC = () => {
       </div>
       <div className="grid grid-flow-col grid-cols-2 grid-rows-1 gap-4">
         <div className="grid place-items-center">
-          <Img fixed={data.icon.childImageSharp.fixed} />
+          {data?.icon?.childImageSharp?.fixed ?
+            <Img fixed={data?.icon?.childImageSharp?.fixed} /> : null}
         </div>
         <div>
           Web Engineer

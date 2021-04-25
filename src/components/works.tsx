@@ -1,4 +1,3 @@
-/// <reference path="../__generated__/gatsby-types.ts" />
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Img from 'gatsby-image'
@@ -27,7 +26,8 @@ const Works: React.FC = () => {
           <div className="flex text-3xl pb-2">CA TECH CHALLENGE<Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/13/005239" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              <Img fixed={data.catech.childImageSharp.fixed} />
+              {data.catech?.childImageSharp?.fixed ?
+                <Img fixed={data.catech?.childImageSharp?.fixed} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2021/3/27~2021/3/28
@@ -38,10 +38,11 @@ const Works: React.FC = () => {
         </div>
         <div>
           <div className="flex text-3xl pb-2">Cookpad Spring Intern<Github url="https://github.com/doriasu/spring-internship-2021-recipe-site" />
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/12/231042" /></div>
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/12/231042" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              <Img fixed={data.cookpad.childImageSharp.fixed} />
+              {data.cookpad?.childImageSharp?.fixed ?
+                <Img fixed={data.cookpad?.childImageSharp?.fixed} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2021/3/22~2021/3/26
@@ -52,10 +53,11 @@ const Works: React.FC = () => {
         </div>
         <div>
           <div className="flex text-3xl pb-2">SpeechManager<Github url="https://github.com/monptt/speechmanager" />
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/03/31/001350" /></div>
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/03/31/001350" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              <Img fixed={data.speech.childImageSharp.fixed} />
+              {data.speech?.childImageSharp?.fixed ?
+                <Img fixed={data.speech?.childImageSharp?.fixed} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2021/3/1~2021/3/12
@@ -68,10 +70,11 @@ const Works: React.FC = () => {
         </div>
         <div>
           <div className="flex text-3xl pb-2">JointSound<Github url="https://github.com/jphacks/B_2021" />
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2020/11/08/000502" /></div>
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2020/11/08/000502" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              <Img fixed={data.jointsound.childImageSharp.fixed} />
+              {data.jointsound?.childImageSharp?.fixed ?
+                <Img fixed={data.jointsound?.childImageSharp?.fixed} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2020/10/31~2020/11/7
@@ -87,7 +90,8 @@ const Works: React.FC = () => {
           <div className="flex text-3xl pb-2">MIKUAR<Hatena url="https://doradorasuki.hatenablog.com/entry/2019/12/16/000132" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              <Img fixed={data.miku.childImageSharp.fixed} />
+              {data.miku?.childImageSharp?.fixed ?
+                <Img fixed={data.miku?.childImageSharp?.fixed} /> : <div>No image</div>}
             </div>
             <div className="col-span-2">
               2019年秋4ヶ月ほど
@@ -99,7 +103,7 @@ const Works: React.FC = () => {
         </div>
         <div>
           <div className="flex text-3xl pb-2">QNX向けカメラドライバ<Github url="https://github.com/doriasu/FixstarsInternship" />
-          <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/09/11/210642" /></div>
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/09/11/210642" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid place-items-center">
               {/* <Img fixed={data.noimage.childImageSharp.fixed} /> */}
