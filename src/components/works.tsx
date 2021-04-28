@@ -27,7 +27,7 @@ const Works: React.FC = () => {
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
               {data.catech?.childImageSharp?.fluid ?
-                <Img fluid={data.catech?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>no image</div>}
+                <Img fluid={data.catech?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2021/3/27~2021/3/28
@@ -42,7 +42,7 @@ const Works: React.FC = () => {
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
               {data.cookpad?.childImageSharp?.fluid ?
-                <Img fluid={data.cookpad?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>no image</div>}
+                <Img fluid={data.cookpad?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2021/3/22~2021/3/26
@@ -57,7 +57,7 @@ const Works: React.FC = () => {
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
               {data.speech?.childImageSharp?.fluid ?
-                <Img fluid={data.speech?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>no image</div>}
+                <Img fluid={data.speech?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2021/3/1~2021/3/12
@@ -74,7 +74,7 @@ const Works: React.FC = () => {
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
               {data.jointsound?.childImageSharp?.fluid ?
-                <Img fluid={data.jointsound?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>no image</div>}
+                <Img fluid={data.jointsound?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2020/10/31~2020/11/7
@@ -91,7 +91,7 @@ const Works: React.FC = () => {
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
               {data.miku?.childImageSharp?.fluid ?
-                <Img fluid={data.miku?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>No image</div>}
+                <Img fluid={data.miku?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>No image</div>}
             </div>
             <div className="col-span-2">
               2019年秋4ヶ月ほど
