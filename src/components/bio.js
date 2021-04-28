@@ -34,7 +34,7 @@ const Bio = () => {
     <div className="bio">
       <StaticImage
         className="bio-avatar"
-        layout="fixed"
+        layout="fluid"
         formats={["AUTO", "WEBP", "AVIF"]}
         src="../images/syakura.jpg"
         width={50}

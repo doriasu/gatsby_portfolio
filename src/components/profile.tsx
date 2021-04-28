@@ -13,8 +13,8 @@ const Profile: React.FC = () => {
       </div>
       <div className="grid grid-flow-col grid-cols-2 grid-rows-1 gap-4">
         <div className="grid place-items-center">
-          {data?.icon?.childImageSharp?.fixed ?
-            <Img fixed={data?.icon?.childImageSharp?.fixed} /> : null}
+          {data?.icon?.childImageSharp?.fluid ?
+            <Img fluid={data?.icon?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : null}
         </div>
         <div>
           Web Engineer
@@ -52,9 +52,11 @@ export const query = graphql`
   query Profileimg {
     icon: file(relativePath: { eq: "syakura.jpg" }) {
       childImageSharp {
-        fixed(width: 200) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
+        
       }
     }
   }

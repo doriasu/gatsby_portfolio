@@ -26,8 +26,8 @@ const Works: React.FC = () => {
           <div className="flex text-3xl pb-2">CA TECH CHALLENGE<Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/13/005239" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.catech?.childImageSharp?.fixed ?
-                <Img fixed={data.catech?.childImageSharp?.fixed} /> : <div>no image</div>}
+              {data.catech?.childImageSharp?.fluid ?
+                <Img fluid={data.catech?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2021/3/27~2021/3/28
@@ -41,8 +41,8 @@ const Works: React.FC = () => {
             <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/12/231042" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.cookpad?.childImageSharp?.fixed ?
-                <Img fixed={data.cookpad?.childImageSharp?.fixed} /> : <div>no image</div>}
+              {data.cookpad?.childImageSharp?.fluid ?
+                <Img fluid={data.cookpad?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2021/3/22~2021/3/26
@@ -56,8 +56,8 @@ const Works: React.FC = () => {
             <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/03/31/001350" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.speech?.childImageSharp?.fixed ?
-                <Img fixed={data.speech?.childImageSharp?.fixed} /> : <div>no image</div>}
+              {data.speech?.childImageSharp?.fluid ?
+                <Img fluid={data.speech?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2021/3/1~2021/3/12
@@ -73,8 +73,8 @@ const Works: React.FC = () => {
             <Hatena url="https://doradorasuki.hatenablog.com/entry/2020/11/08/000502" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.jointsound?.childImageSharp?.fixed ?
-                <Img fixed={data.jointsound?.childImageSharp?.fixed} /> : <div>no image</div>}
+              {data.jointsound?.childImageSharp?.fluid ?
+                <Img fluid={data.jointsound?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>no image</div>}
             </div>
             <div className="col-span-2">
               2020/10/31~2020/11/7
@@ -90,8 +90,8 @@ const Works: React.FC = () => {
           <div className="flex text-3xl pb-2">MIKUAR<Hatena url="https://doradorasuki.hatenablog.com/entry/2019/12/16/000132" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.miku?.childImageSharp?.fixed ?
-                <Img fixed={data.miku?.childImageSharp?.fixed} /> : <div>No image</div>}
+              {data.miku?.childImageSharp?.fluid ?
+                <Img fluid={data.miku?.childImageSharp?.fluid} style={{ width: "10vw"}} /> : <div>No image</div>}
             </div>
             <div className="col-span-2">
               2019年秋4ヶ月ほど
@@ -106,7 +106,6 @@ const Works: React.FC = () => {
             <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/09/11/210642" /></div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid place-items-center">
-              {/* <Img fixed={data.noimage.childImageSharp.fixed} /> */}
               No Image
             </div>
             <div className="col-span-2">
@@ -127,43 +126,49 @@ export const query = graphql`
   query Workimg {
     catech: file(relativePath: { eq: "catech.png" }) {
       childImageSharp {
-        fixed(width: 140, height: 140) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 140, maxHeight: 140) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }
     cookpad: file(relativePath: { eq: "cookpad.png" }) {
       childImageSharp {
-        fixed(width: 140, height: 140) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 140, maxHeight: 140) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }
     jointsound: file(relativePath: { eq: "jointsound.png" }) {
       childImageSharp {
-        fixed(width: 140, height: 140) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 140, maxHeight: 140) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }
     speech: file(relativePath: { eq: "speechmanager.png" }) {
       childImageSharp {
-        fixed(width: 140, height: 140) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 140, maxHeight: 140) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }
     noimage: file(relativePath: { eq: "noimage.png" }) {
       childImageSharp {
-        fixed(width: 140, height: 140) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 140, maxHeight: 140) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }
     miku: file(relativePath: { eq: "miku.png" }) {
       childImageSharp {
-        fixed(width: 140, height: 140) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 140, maxHeight: 140) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }
