@@ -7,7 +7,7 @@ const Carrer: React.FC = () => {
             </div>
             <div className="pb-4">
             <div className="text-3xl pb-2 pt-4">PriceHubbleJapan</div>
-                <div>2020/2~現在<br />pythonを用いたデータ取得やデータ整形他データの可視化(react,powerBI)に取り組んでいます。</div>
+                <div>2020/2~2021/5<br />pythonを用いたデータ取得やデータ整形他データの可視化(react,powerBI)に取り組んでいました。</div>
             </div>
             <div>
                 <div className="text-3xl pb-2">FixStars</div>

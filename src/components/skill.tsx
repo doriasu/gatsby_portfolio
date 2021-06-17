@@ -5,7 +5,7 @@ const Skill: React.FC = () => {
     <div className="pb-8">
       <div className="text-4xl border-b-2 border-black inline-block">Skill</div>
       <div className="text-center pb-4">現在ホットな順に書いていきます</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pb-4">
         <div>
           <div className="text-3xl pb-2">TypeScript</div>
           <div>
