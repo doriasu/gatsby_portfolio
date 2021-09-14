@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import Img from 'gatsby-image'
-import Github from '../atoms/github'
-import Hatena from '../atoms/hatena'
+import Img from "gatsby-image"
+import Github from "../atoms/github"
+import Hatena from "../atoms/hatena"
 
 const Works: React.FC = () => {
   const data = useStaticQuery<GatsbyTypes.WorkimgQuery>(query)
@@ -12,7 +12,24 @@ const Works: React.FC = () => {
       <div className="text-center pb-4">時系列順に書いていきます</div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pb-4">
         <div>
-          <div className="flex text-3xl pb-2">このサイト<Github url="https://github.com/doriasu/gatsby_portfolio" /><Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/25/220728" /></div>
+          <div className="flex text-3xl pb-2">あにみる</div>
+          <div className="grid grid-cols-3 gap-4 pb-4">
+            <div className="grid place-items-center">No Image</div>
+            <div className="col-span-2">
+              2021年夏
+              <br />
+              Treasure(Voyage
+              Groupの夏インターン)にてチーム開発で製作しました。アニメを一緒に見る人を募集し、サイト上で通話ができます。
+              主にフロントエンド部分を担当し、ReactとSkyWayを用いて開発を行いました。
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="flex text-3xl pb-2">
+            このサイト
+            <Github url="https://github.com/doriasu/gatsby_portfolio" />
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/25/220728" />
+          </div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid place-items-center">This Page</div>
             <div className="col-span-2">
@@ -23,11 +40,20 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="flex text-3xl pb-2">CA TECH CHALLENGE<Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/13/005239" /></div>
+          <div className="flex text-3xl pb-2">
+            CA TECH CHALLENGE
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/13/005239" />
+          </div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.catech?.childImageSharp?.fluid ?
-                <Img fluid={data.catech?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>no image</div>}
+              {data.catech?.childImageSharp?.fluid ? (
+                <Img
+                  fluid={data.catech?.childImageSharp?.fluid}
+                  style={{ width: "20vw" }}
+                />
+              ) : (
+                <div>no image</div>
+              )}
             </div>
             <div className="col-span-2">
               2021/3/27~2021/3/28
@@ -37,12 +63,21 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="flex text-3xl pb-2">Cookpad Spring Intern<Github url="https://github.com/doriasu/spring-internship-2021-recipe-site" />
-            <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/12/231042" /></div>
+          <div className="flex text-3xl pb-2">
+            Cookpad Spring Intern
+            <Github url="https://github.com/doriasu/spring-internship-2021-recipe-site" />
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/04/12/231042" />
+          </div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.cookpad?.childImageSharp?.fluid ?
-                <Img fluid={data.cookpad?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>no image</div>}
+              {data.cookpad?.childImageSharp?.fluid ? (
+                <Img
+                  fluid={data.cookpad?.childImageSharp?.fluid}
+                  style={{ width: "20vw" }}
+                />
+              ) : (
+                <div>no image</div>
+              )}
             </div>
             <div className="col-span-2">
               2021/3/22~2021/3/26
@@ -52,12 +87,21 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="flex text-3xl pb-2">SpeechManager<Github url="https://github.com/monptt/speechmanager" />
-            <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/03/31/001350" /></div>
+          <div className="flex text-3xl pb-2">
+            SpeechManager
+            <Github url="https://github.com/monptt/speechmanager" />
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2021/03/31/001350" />
+          </div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.speech?.childImageSharp?.fluid ?
-                <Img fluid={data.speech?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>no image</div>}
+              {data.speech?.childImageSharp?.fluid ? (
+                <Img
+                  fluid={data.speech?.childImageSharp?.fluid}
+                  style={{ width: "20vw" }}
+                />
+              ) : (
+                <div>no image</div>
+              )}
             </div>
             <div className="col-span-2">
               2021/3/1~2021/3/12
@@ -69,12 +113,21 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="flex text-3xl pb-2">JointSound<Github url="https://github.com/jphacks/B_2021" />
-            <Hatena url="https://doradorasuki.hatenablog.com/entry/2020/11/08/000502" /></div>
+          <div className="flex text-3xl pb-2">
+            JointSound
+            <Github url="https://github.com/jphacks/B_2021" />
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2020/11/08/000502" />
+          </div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.jointsound?.childImageSharp?.fluid ?
-                <Img fluid={data.jointsound?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>no image</div>}
+              {data.jointsound?.childImageSharp?.fluid ? (
+                <Img
+                  fluid={data.jointsound?.childImageSharp?.fluid}
+                  style={{ width: "20vw" }}
+                />
+              ) : (
+                <div>no image</div>
+              )}
             </div>
             <div className="col-span-2">
               2020/10/31~2020/11/7
@@ -87,11 +140,20 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="flex text-3xl pb-2">MIKUAR<Hatena url="https://doradorasuki.hatenablog.com/entry/2019/12/16/000132" /></div>
+          <div className="flex text-3xl pb-2">
+            MIKUAR
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/12/16/000132" />
+          </div>
           <div className="grid grid-cols-3 gap-4 pb-4">
             <div className="grid justify-center">
-              {data.miku?.childImageSharp?.fluid ?
-                <Img fluid={data.miku?.childImageSharp?.fluid} style={{ width: "20vw"}} /> : <div>No image</div>}
+              {data.miku?.childImageSharp?.fluid ? (
+                <Img
+                  fluid={data.miku?.childImageSharp?.fluid}
+                  style={{ width: "20vw" }}
+                />
+              ) : (
+                <div>No image</div>
+              )}
             </div>
             <div className="col-span-2">
               2019年秋4ヶ月ほど
@@ -102,12 +164,13 @@ const Works: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="flex text-3xl pb-2">QNX向けカメラドライバ<Github url="https://github.com/doriasu/FixstarsInternship" />
-            <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/09/11/210642" /></div>
+          <div className="flex text-3xl pb-2">
+            QNX向けカメラドライバ
+            <Github url="https://github.com/doriasu/FixstarsInternship" />
+            <Hatena url="https://doradorasuki.hatenablog.com/entry/2019/09/11/210642" />
+          </div>
           <div className="grid grid-cols-3 gap-4 pb-4">
-            <div className="grid place-items-center">
-              No Image
-            </div>
+            <div className="grid place-items-center">No Image</div>
             <div className="col-span-2">
               2019年夏
               <br />
