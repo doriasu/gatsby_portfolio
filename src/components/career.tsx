@@ -3,12 +3,12 @@ const Carrer: React.FC = () => {
   return (
     <div className="pb-8">
       <div className="text-4xl border-b-2 border-black inline-block">
-        Carrer
+        Career
       </div>
       <div className="pb-4">
         <div className="text-3xl pb-2 pt-4">Wantedly</div>
         <div>
-          2020/8~2021/9
+          2021/8~2021/9
           <br />
           終業型のインターンを2週間取り組みました。ReactとGraphQLを用いて新機能の開発に取り組みました。
         </div>
@@ -16,7 +16,7 @@ const Carrer: React.FC = () => {
       <div className="pb-4">
         <div className="text-3xl pb-2 pt-4">Voyage Group</div>
         <div>
-          2020/8~2021/8
+          2021/8~2021/8
           <br />
           Treasureというインターンで前半講義を受け、後半チーム開発を3週間行いました。後半のチーム開発ではアイデア出しから
           設計、開発を行なった他、開発では主にフロントエンドを担当しReact、SkyWayを用いました。
